@@ -1,0 +1,4 @@
+
+# This file is intentionally left empty since the project primarily uses HTML/CSS/JS 
+# and does not require any client-side dependencies documented at this time. 
+# Should any libraries be added in future development, they can be documented here.
