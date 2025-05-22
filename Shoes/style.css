@@ -1,13 +1,19 @@
+
+body {
     margin: 0;
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #333;
 }
 
 a {
-    color: #009688;
+    color: #3498db;
     text-decoration: none;
     transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
 }
 
 header {
@@ -25,11 +31,10 @@ header h1 {
 nav ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
 nav ul li {
+    display: inline;
     margin-right: 15px;
 }
 
@@ -40,26 +45,25 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #575757;
+    background-color: #2c3e50;
     border-radius: 5px;
 }
 
-/* Button Styles */
 button {
-    background-color: #009688;
+    background-color: #3498db;
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
-    background-color: #00796b;
+    background-color: #2980b9;
+    transform: scale(1.05);
 }
 
-/* Forms and Inputs */
 .login-container {
     max-width: 400px;
     margin: 50px auto;
@@ -67,6 +71,9 @@ button:hover {
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 form {
@@ -88,16 +95,16 @@ form input[type="password"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 100%;
+    width: calc(100% - 22px);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
+    body {
+        font-size: 0.9rem;
     }
 
     nav ul li {
+        display: block;
         margin-bottom: 10px;
     }
 
@@ -105,23 +112,28 @@ form input[type="password"] {
         width: 90%;
     }
 
-    header h1 {
-        font-size: 2rem;
+    section {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.25rem;
     }
 }
 
-/* Section Styles */
 section {
-    padding: 20px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     border-bottom: 1px solid #ccc;
 }
 
 section h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-top: 0;
 }
 
-/* Social Media Links */
 #contact ul {
     list-style-type: none;
     padding: 0;
@@ -133,10 +145,14 @@ section h2 {
 }
 
 #contact ul li a {
-    color: #009688;
+    color: #3498db;
     transition: color 0.3s ease;
 }
 
 #contact ul li a:hover {
-    color: #00796b;
+    color: #0056b3;
+}
+
+body, button, input, select, textarea {
+    font-family: 'Roboto', sans-serif;
 }
