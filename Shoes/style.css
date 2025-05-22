@@ -1,13 +1,12 @@
     margin: 0;
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
 }
 
 a {
-    color: #009688;
+    color: #007bff;
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
 header {
@@ -19,7 +18,7 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 nav ul {
@@ -46,7 +45,7 @@ nav ul li a:hover {
 
 /* Button Styles */
 button {
-    background-color: #009688;
+    background-color: #007bff;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -56,7 +55,7 @@ button {
 }
 
 button:hover {
-    background-color: #00796b;
+    background-color: #0056b3;
 }
 
 /* Forms and Inputs */
@@ -106,7 +105,7 @@ form input[type="password"] {
     }
 
     header h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -117,7 +116,7 @@ section {
 }
 
 section h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-top: 0;
 }
 
@@ -133,10 +132,10 @@ section h2 {
 }
 
 #contact ul li a {
-    color: #009688;
+    color: #007bff;
     transition: color 0.3s ease;
 }
 
 #contact ul li a:hover {
-    color: #00796b;
+    color: #0056b3;
 }
