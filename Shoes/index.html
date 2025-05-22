@@ -5,24 +5,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header role="banner">
         <h1>Welcome to ShoeS</h1>
     </header>
-    <main>
-        <section id="intro">
-            <h2>Discover Our Collection</h2>
-            <p>Explore the best shoes from around the world.</p>
-        </section>
-        <section id="login-section">
+    <main role="main">
+        <section aria-labelledby="login-section">
+            <h2 id="login-section" class="visually-hidden">Login Section</h2>
             <button onclick="redirectToLogin()">Login/Signup</button>
         </section>
+        <section aria-labelledby="about-section">
+            <h2 id="about-section">About Us</h2>
+            <p>Welcome to ShoeS, your one-stop shop for the latest trends in footwear. Discover our collection now!</p>
+        </section>
+        <section aria-labelledby="contact-section">
+            <h2 id="contact-section">Contact Us</h2>
+            <p>For inquiries, please email us at contact@shoes.com or follow us on our social media channels.</p>
+        </section>
     </main>
-    <footer id="contact">
-        <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-        </ul>
+    <footer role="contentinfo">
+        <p>&copy; 2023 ShoeS. All rights reserved.</p>
     </footer>
     <script src="main.js"></script>
 </body>
