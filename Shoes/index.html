@@ -1,3 +1,4 @@
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,11 @@
         <h1>Welcome to ShoeS</h1>
     </header>
     <main>
+        <section id="hero" style="background-image: url('shoe-background.jpg'); padding: 50px; text-align: center; color: white;">
+            <h2>Your Perfect Style Awaits</h2>
+            <p>Find your next favorite pair of shoes.</p>
+            <button onclick="redirectToGetStarted()">Get Started</button>
+        </section>
         <section id="intro">
             <h2>Discover Our Collection</h2>
             <p>Explore the best shoes from around the world.</p>
@@ -27,3 +33,55 @@
     <script src="main.js"></script>
 </body>
 </html>
+```
+
+```javascript
+// main.js
+
+// Function to redirect to the login page
+function redirectToLogin() {
+    window.location.href = "login.html";
+}
+
+// Function to redirect to the get started page
+function redirectToGetStarted() {
+    window.location.href = "/home/aparna/codeshwar/testbot_v1/local_GPT2/api/v1/repository/SOURCE_DOCUMENTS-987645329/landing-page/Shoes/login.html";
+}
+
+// Function to login the user
+function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Simple username/password validation
+    if (username === "user" && password === "pass") {
+        // Save user session
+        sessionStorage.setItem('user', username);
+        // Redirect to home page
+        window.location.href = "home.html";
+    } else {
+        alert('Invalid username or password.');
+    }
+}
+
+// Function to signup the user
+function signup() {
+    // Ideally, signup logic would go here
+    alert('Signup functionality not implemented.');
+}
+
+// Event listener to check if user is logged in
+window.addEventListener('load', () => {
+    const user = sessionStorage.getItem('user');
+    if (user) {
+        // Redirect to home page if logged in
+        window.location.href = "home.html";
+    }
+});
+
+// Navigation functions for homepage
+function navigateTo(section) {
+    document.getElementById(section).scrollIntoView({
+        behavior: "smooth"
+    });
+}

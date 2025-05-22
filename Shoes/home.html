@@ -1,3 +1,4 @@
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
         <h1>Welcome to ShoeS</h1>
         <nav>
             <ul>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -17,6 +19,11 @@
     </header>
 
     <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to ShoeS, where style meets comfort. Explore our diverse range of footwear that suits every occasion.</p>
+        </section>
+        
         <section id="about">
             <h2>About Us</h2>
             <p>ShoeS is dedicated to providing the best footwear for every occasion. Our brand is synonymous with style and comfort.</p>
@@ -24,7 +31,23 @@
         
         <section id="products">
             <h2>Products</h2>
-            <p>Our product range includes elegant formal wear, casual sneakers, and rugged outdoor shoes.</p>
+            <div class="product-card">
+                <h3>Elegant Formal Wear</h3>
+                <p>Our selection of formal shoes provides elegance and comfort for business and formal events.</p>
+            </div>
+            <div class="product-card">
+                <h3>Casual Sneakers</h3>
+                <p>Comfortable and stylish sneakers perfect for everyday wear.</p>
+            </div>
+            <div class="product-card">
+                <h3>Rugged Outdoor Shoes</h3>
+                <p>Durable and sturdy shoes designed for all outdoor adventures.</p>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <p>"ShoeS provides the best comfort and style! I love their products!" - Jane Doe</p>
         </section>
 
         <section id="contact">
@@ -37,6 +60,10 @@
             </ul>
         </section>
     </main>
+
+    <footer>
+        <p>Contact us: contact@shoes.com | Follow us: <a href="http://facebook.com/shoes" target="_blank">Facebook</a>, <a href="http://twitter.com/shoes" target="_blank">Twitter</a>, <a href="http://instagram.com/shoes" target="_blank">Instagram</a></p>
+    </footer>
 
     <script src="main.js"></script>
 </body>

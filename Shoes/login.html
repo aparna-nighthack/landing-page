@@ -1,3 +1,4 @@
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,3 +26,32 @@
     <script src="main.js"></script>
 </body>
 </html>
+```
+
+```javascript
+const homePagePath = "/home/aparna/codeshwar/testbot_v1/local_GPT2/api/v1/repository/SOURCE_DOCUMENTS-987645329/landing-page/Shoes/home.html";
+
+function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    sessionStorage.setItem('user', username);
+    window.location.href = homePagePath;
+}
+
+function signup() {
+    alert('Signup functionality not implemented.');
+}
+
+window.addEventListener('load', () => {
+    const user = sessionStorage.getItem('user');
+    if (user) {
+        window.location.href = homePagePath;
+    }
+});
+
+function navigateTo(section) {
+    document.getElementById(section).scrollIntoView({
+        behavior: "smooth"
+    });
+}
