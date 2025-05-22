@@ -1,0 +1,79 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --background-color: #ecf0f1;
+  --text-color: #333;
+  --header-footer-bg: #34495e;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header, footer {
+  background-color: var(--header-footer-bg);
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+header nav a:hover {
+  background-color: var(--secondary-color);
+}
+
+main {
+  padding: 2em;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+  margin-top: 0;
+}
+
+button {
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 0.5em 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  header nav {
+    flex-direction: column;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  button {
+    width: 100%;
+    padding: 1em;
+  }
+}
