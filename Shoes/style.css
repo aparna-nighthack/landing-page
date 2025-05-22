@@ -1,13 +1,13 @@
-body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
 }
 
 a {
-    color: #007bff;
+    color: #009688;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 header {
@@ -19,16 +19,17 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin-right: 15px;
 }
 
@@ -45,7 +46,7 @@ nav ul li a:hover {
 
 /* Button Styles */
 button {
-    background-color: #007bff;
+    background-color: #009688;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -55,7 +56,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #00796b;
 }
 
 /* Forms and Inputs */
@@ -92,8 +93,11 @@ form input[type="password"] {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
     nav ul li {
-        display: block;
         margin-bottom: 10px;
     }
 
@@ -102,7 +106,7 @@ form input[type="password"] {
     }
 
     header h1 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }
 
@@ -113,7 +117,7 @@ section {
 }
 
 section h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-top: 0;
 }
 
@@ -129,10 +133,10 @@ section h2 {
 }
 
 #contact ul li a {
-    color: #007bff;
+    color: #009688;
     transition: color 0.3s ease;
 }
 
 #contact ul li a:hover {
-    color: #0056b3;
+    color: #00796b;
 }
