@@ -1,12 +1,5 @@
-
-# Flask is used to create a simple server to host the website locally.
-Flask==2.0.1
-
-# Jinja2 is the templating engine for rendering HTML pages.
 Jinja2==3.0.1
-
-# Bootstrap is a CSS framework for developing responsive and visually appealing web pages.
 bootstrap==5.1.0
-
-# jQuery is used for DOM manipulation and event handling.
 jquery==3.6.0
+gsap==3.7.1
+firebase==8.6.8

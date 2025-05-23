@@ -1,0 +1,88 @@
+
+// Initialize Firebase
+// TODO: Replace the following with your app's Firebase project configuration
+var firebaseConfig = {
+    apiKey: "YOUR_API_KEY",
+    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+    projectId: "YOUR_PROJECT_ID",
+    storageBucket: "YOUR_PROJECT_ID.appspot.com",
+    messagingSenderId: "YOUR_SENDER_ID",
+    appId: "YOUR_APP_ID"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Function to handle user login
+function loginWithEmailAndPassword(email, password) {
+    firebase.auth().signInWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            // Successfully logged in
+            var user = userCredential.user;
+            console.log('User logged in:', user);
+            sessionStorage.setItem('user', user.email);
+            window.location.href = "home.html";
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.error('Error during login:', errorCode, errorMessage);
+            alert('Login failed: ' + errorMessage);
+        });
+}
+
+// Function to handle user signup
+function signupWithEmailAndPassword(email, password) {
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then((userCredential) => {
+            // Successfully signed up
+            var user = userCredential.user;
+            console.log('User signed up:', user);
+            sessionStorage.setItem('user', user.email);
+            window.location.href = "home.html";
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.error('Error during signup:', errorCode, errorMessage);
+            alert('Signup failed: ' + errorMessage);
+        });
+}
+
+// Function to handle Google Login
+function loginWithGoogle() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase.auth().signInWithPopup(provider)
+        .then((result) => {
+            // Successfully logged in with Google
+            var user = result.user;
+            console.log('User logged in with Google:', user);
+            sessionStorage.setItem('user', user.email);
+            window.location.href = "home.html";
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.error('Error during Google login:', errorCode, errorMessage);
+            alert('Google login failed: ' + errorMessage);
+        });
+}
+
+// Function to handle Facebook Login
+function loginWithFacebook() {
+    var provider = new firebase.auth.FacebookAuthProvider();
+    firebase.auth().signInWithPopup(provider)
+        .then((result) => {
+            // Successfully logged in with Facebook
+            var user = result.user;
+            console.log('User logged in with Facebook:', user);
+            sessionStorage.setItem('user', user.email);
+            window.location.href = "home.html";
+        })
+        .catch((error) => {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.error('Error during Facebook login:', errorCode, errorMessage);
+            alert('Facebook login failed: ' + errorMessage);
+        });
+}
