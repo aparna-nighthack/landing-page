@@ -1,3 +1,4 @@
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,9 @@
     <div class="login-container shadow">
         <h1 class="title">Welcome to ShoeS</h1>
         <form id="loginForm" class="form-container">
+            <div class="form-group">
+                <div id="error-message" class="error-message" style="display:none; color:red;"></div>
+            </div>
             <div class="form-group">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" class="input-field" required>
@@ -25,3 +29,37 @@
     <script src="main.js"></script>
 </body>
 </html>
+```
+
+```javascript
+function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (!username || !password) {
+        alert('Username and password must not be empty.');
+        return;
+    }
+
+    if (username === "user" && password === "pass") {
+        alert('Login successful.');
+    } else {
+        showError('Invalid username or password.');
+    }
+}
+
+function signup() {
+    alert('Signup functionality not implemented.');
+}
+
+function showError(message) {
+    const errorElement = document.getElementById('error-message');
+    errorElement.textContent = message;
+    errorElement.style.display = 'block';
+}
+
+// Event listener to check if user is logged in
+window.onload = () => {
+    // Example logic to check if user session exists
+    // Hide/show elements based on login status
+};
