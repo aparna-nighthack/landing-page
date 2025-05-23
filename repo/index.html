@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Application</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>My Application</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to My Application</h2>
+            <p>This is a placeholder for the home section content.</p>
+            <button class="toggle-btn" data-target-id="home-details">Toggle Details</button>
+            <div id="home-details" style="display: none;">
+                <p>Here are more details about the home section.</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>This is a placeholder for the about section content.</p>
+            <button class="toggle-btn" data-target-id="about-details">Toggle Details</button>
+            <div id="about-details" style="display: none;">
+                <p>Here are more details about the about section.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>This is a placeholder for the contact section content.</p>
+            <button class="toggle-btn" data-target-id="contact-details">Toggle Details</button>
+            <div id="contact-details" style="display: none;">
+                <p>Here are more contact details.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Follow us on:</p>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+</body>
+</html>
