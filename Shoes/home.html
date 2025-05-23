@@ -1,3 +1,4 @@
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +13,7 @@
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#products">Products</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#dashboard">Dashboard</a></li>
             </ul>
         </nav>
     </header>
@@ -36,8 +38,48 @@
                 <li><a href="http://instagram.com/shoes" target="_blank">Instagram</a></li>
             </ul>
         </section>
+        
+        <section id="dashboard">
+            <h2>Welcome Back!</h2>
+            <p>This is your dashboard, where you can find the latest updates and your account information.</p>
+        </section>
     </main>
 
     <script src="main.js"></script>
 </body>
 </html>
+```
+
+```javascript
+function redirectToLogin() {
+    window.location.href = "login.html";
+}
+
+function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === "user" && password === "pass") {
+        sessionStorage.setItem('user', username);
+        window.location.href = "home.html";
+    } else {
+        alert('Invalid username or password.');
+    }
+}
+
+function signup() {
+    alert('Signup functionality not implemented.');
+}
+
+window.addEventListener('load', () => {
+    const user = sessionStorage.getItem('user');
+    if (user) {
+        window.location.href = "home.html";
+    }
+});
+
+function navigateTo(section) {
+    document.getElementById(section).scrollIntoView({
+        behavior: "smooth"
+    });
+}
