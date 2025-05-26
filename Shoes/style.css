@@ -2,6 +2,7 @@
     font-family: 'Open Sans', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
@@ -27,6 +28,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -121,7 +123,29 @@ section h2 {
     margin-top: 0;
 }
 
-/* Social Media Links */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60vh;
+    background-color: #f0f0f0;
+    margin: 20px 0;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode a {
+    color: #80cbc4;
+}
+
+body.dark-mode header {
+    background-color: #1e1e1e;
+}
+
 #contact ul {
     list-style-type: none;
     padding: 0;
