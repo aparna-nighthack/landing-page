@@ -59,6 +59,20 @@ button:hover {
     background-color: #00796b;
 }
 
+/* Image Styles */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Forms and Inputs */
 .login-container {
     max-width: 400px;
@@ -107,6 +121,14 @@ form input[type="password"] {
 
     header h1 {
         font-size: 2rem;
+    }
+
+    .image-container {
+        margin: 10px 0;
+    }
+
+    .image-container img {
+        max-width: 100%;
     }
 }
 
