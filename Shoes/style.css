@@ -2,6 +2,9 @@
     font-family: 'Open Sans', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
+    background-image: url('https://wallpapercave.com/wp/wp2858551.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 a {
